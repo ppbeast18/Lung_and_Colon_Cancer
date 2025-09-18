@@ -69,15 +69,6 @@ The dataset contains **25,000 histopathological images**.
 
 Shows strong classification performance across all classes.
 
-## Getting Started
-
-1. Clone the repo and install dependencies.
-2. Download dataset from Kaggle using:
-    ```
-    kaggle datasets download -d andrewmvd/lung-and-colon-cancer-histopathological-images
-    ```
-3. Follow the Jupyter notebook steps for training and evaluation.
-
 ## License
 
 Dataset: CC-BY-SA-4.0
