@@ -38,3 +38,46 @@ The dataset contains **25,000 histopathological images**.
    ```bash
    !kaggle datasets download -d andrewmvd/lung-and-colon-cancer-histopathological-images
    unzip lung-and-colon-cancer-histopathological-images.zip
+
+## Data Preparation
+
+- **Image paths and labels** are stored in a Pandas DataFrame.
+- Dataset split: **Train (80%)**, **Validation (10%)**, **Test (10%)**.
+- Images resized to **224×224×3** for input to the model.
+
+## Model Architecture
+
+- **CNN layers:** Multiple Conv2D + MaxPooling layers.
+- **Global Context Attention:** Added in deeper layers for refined feature extraction.
+- **Dense layers & Dropout:** Fully connected dense layers for final classification, with dropout for regularization.
+- **Softmax Activation:** Used for multi-class output (5 classes).
+
+## Training
+
+- **Optimizer:** Adam (`lr=0.0005`)
+- **Loss Function:** Categorical Crossentropy
+- **Epochs:** 20
+- **Batch Size:** 64
+
+## 📊 Results
+
+- **Training Accuracy:** 99.6%
+- **Validation Accuracy:** 99.0%
+- **Test Accuracy:** 99.0%
+
+### 🔹 Confusion Matrix
+
+Shows strong classification performance across all classes.
+
+## Getting Started
+
+1. Clone the repo and install dependencies.
+2. Download dataset from Kaggle using:
+    ```
+    kaggle datasets download -d andrewmvd/lung-and-colon-cancer-histopathological-images
+    ```
+3. Follow the Jupyter notebook steps for training and evaluation.
+
+## License
+
+Dataset: CC-BY-SA-4.0
